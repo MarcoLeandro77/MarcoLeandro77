@@ -1,0 +1,948 @@
+object frmCadPontoUnidade: TfrmCadPontoUnidade
+  Left = 0
+  Top = 0
+  ClientHeight = 621
+  ClientWidth = 839
+  Caption = 'Cadastro Pontos de Unidades'
+  OnShow = UniFormShow
+  OldCreateOrder = False
+  MonitoredKeys.Keys = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  object UniPanel1: TUniPanel
+    Left = 0
+    Top = 0
+    Width = 839
+    Height = 621
+    Hint = ''
+    Align = alClient
+    TabOrder = 0
+    Caption = ''
+    object UniPanel2: TUniPanel
+      Left = 3
+      Top = 3
+      Width = 830
+      Height = 615
+      Hint = ''
+      BodyRTL = False
+      TabOrder = 1
+      BorderStyle = ubsSolid
+      Caption = ''
+      Color = clSilver
+      object UniLabel1: TUniLabel
+        Left = 233
+        Top = 75
+        Width = 91
+        Height = 15
+        Hint = ''
+        Caption = 'C'#243'digo do Ponto:'
+        ParentFont = False
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 1
+      end
+      object UniLabel2: TUniLabel
+        Left = 29
+        Top = 75
+        Width = 103
+        Height = 15
+        Hint = ''
+        Caption = 'C'#243'digo da Unidade:'
+        ParentFont = False
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 2
+      end
+      object UniLabel3: TUniLabel
+        Left = 429
+        Top = 75
+        Width = 28
+        Height = 15
+        Hint = ''
+        Caption = 'CEP:'
+        ParentFont = False
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 3
+      end
+      object UniLabel4: TUniLabel
+        Left = 429
+        Top = 111
+        Width = 41
+        Height = 15
+        Hint = ''
+        Caption = 'Bairro:'
+        ParentFont = False
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 4
+      end
+      object UniLabel5: TUniLabel
+        Left = 29
+        Top = 111
+        Width = 26
+        Height = 15
+        Hint = ''
+        Caption = 'Rua:'
+        ParentFont = False
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 5
+      end
+      object UniLabel6: TUniLabel
+        Left = 691
+        Top = 111
+        Width = 48
+        Height = 15
+        Hint = ''
+        Caption = 'N'#250'mero:'
+        ParentFont = False
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 6
+      end
+      object UniLabel7: TUniLabel
+        Left = 29
+        Top = 147
+        Width = 41
+        Height = 15
+        Hint = ''
+        Caption = 'Cidade:'
+        ParentFont = False
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 7
+      end
+      object UniLabel8: TUniLabel
+        Left = 286
+        Top = 146
+        Width = 19
+        Height = 15
+        Hint = ''
+        Caption = 'UF:'
+        ParentFont = False
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 8
+      end
+      object UniLabel9: TUniLabel
+        Left = 429
+        Top = 147
+        Width = 113
+        Height = 15
+        Hint = ''
+        Caption = 'Ponto de Refer'#234'ncia:'
+        ParentFont = False
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 9
+      end
+      object UniLabel10: TUniLabel
+        Left = 622
+        Top = 75
+        Width = 37
+        Height = 15
+        Hint = ''
+        Caption = 'CNPJ:'
+        ParentFont = False
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 10
+      end
+      object edtPonto: TUniEdit
+        Left = 330
+        Top = 72
+        Width = 50
+        Hint = ''
+        BorderStyle = ubsNone
+        Text = ''
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 12
+        InputMask.Mask = '9999'
+        OnKeyPress = edtPontoKeyPress
+      end
+      object UniLabel11: TUniLabel
+        Left = 314
+        Top = 19
+        Width = 196
+        Height = 19
+        Hint = ''
+        Caption = 'Cadastro Ponto das Unidades'
+        ParentFont = False
+        Font.Height = -16
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 13
+      end
+      object UniPanel3: TUniPanel
+        Left = 305
+        Top = 38
+        Width = 219
+        Height = 1
+        Hint = ''
+        TabOrder = 14
+        BorderStyle = ubsSolid
+        Caption = ''
+        Color = clBackground
+      end
+      object edtUnidade: TUniEdit
+        Left = 144
+        Top = 72
+        Width = 50
+        Hint = ''
+        BorderStyle = ubsNone
+        Text = ''
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 11
+        InputMask.Mask = '9999'
+        OnExit = edtUnidadeExit
+        OnKeyPress = edtUnidadeKeyPress
+      end
+      object edtCEP: TUniEdit
+        Left = 478
+        Top = 72
+        Width = 80
+        Hint = ''
+        BorderStyle = ubsNone
+        Text = ''
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 15
+        InputMask.Mask = '99999-999'
+        OnKeyPress = edtCEPKeyPress
+      end
+      object edtCNPJ: TUniEdit
+        Left = 670
+        Top = 72
+        Width = 130
+        Hint = ''
+        BorderStyle = ubsNone
+        Text = ''
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 16
+        InputMask.Mask = '99.999.999/9999-99'
+        OnExit = edtCNPJExit
+        OnKeyPress = edtCNPJKeyPress
+      end
+      object edtBairro: TUniEdit
+        Left = 478
+        Top = 108
+        Width = 170
+        Hint = ''
+        BorderStyle = ubsNone
+        Text = ''
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 18
+        OnKeyPress = edtBairroKeyPress
+      end
+      object edtRua: TUniEdit
+        Left = 66
+        Top = 108
+        Width = 314
+        Hint = ''
+        BorderStyle = ubsNone
+        Text = ''
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 17
+        OnKeyPress = edtRuaKeyPress
+      end
+      object edtNumero: TUniEdit
+        Left = 750
+        Top = 108
+        Width = 50
+        Hint = ''
+        BorderStyle = ubsNone
+        Text = ''
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 19
+        InputMask.Mask = '99999'
+        OnKeyDown = edtNumeroKeyDown
+        OnKeyPress = edtNumeroKeyPress
+      end
+      object edtCidade: TUniEdit
+        Left = 78
+        Top = 144
+        Width = 170
+        Hint = ''
+        BorderStyle = ubsNone
+        Text = ''
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 20
+        OnKeyDown = edtCidadeKeyDown
+        OnKeyPress = edtCidadeKeyPress
+      end
+      object cmbUF: TUniComboBox
+        Left = 311
+        Top = 143
+        Width = 67
+        Height = 23
+        Hint = ''
+        Style = csDropDownList
+        Text = ''
+        Items.Strings = (
+          'RS'
+          'SC'
+          'PR')
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 21
+        IconItems = <>
+        OnKeyPress = cmbUFKeyPress
+      end
+      object edtPontoRef: TUniEdit
+        Left = 560
+        Top = 144
+        Width = 240
+        Hint = ''
+        BorderStyle = ubsNone
+        Text = ''
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 22
+        OnKeyPress = edtPontoRefKeyPress
+      end
+      object btnCadastrar: TUniBitBtn
+        Left = 29
+        Top = 185
+        Width = 87
+        Height = 25
+        Hint = ''
+        Glyph.Data = {
+          36050000424D3605000000000000360400002800000010000000100000000100
+          08000000000000010000C40E0000C40E00000001000000000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000C0DCC000F0CA
+          A6000020400000206000002080000020A0000020C0000020E000004000000040
+          20000040400000406000004080000040A0000040C0000040E000006000000060
+          20000060400000606000006080000060A0000060C0000060E000008000000080
+          20000080400000806000008080000080A0000080C0000080E00000A0000000A0
+          200000A0400000A0600000A0800000A0A00000A0C00000A0E00000C0000000C0
+          200000C0400000C0600000C0800000C0A00000C0C00000C0E00000E0000000E0
+          200000E0400000E0600000E0800000E0A00000E0C00000E0E000400000004000
+          20004000400040006000400080004000A0004000C0004000E000402000004020
+          20004020400040206000402080004020A0004020C0004020E000404000004040
+          20004040400040406000404080004040A0004040C0004040E000406000004060
+          20004060400040606000406080004060A0004060C0004060E000408000004080
+          20004080400040806000408080004080A0004080C0004080E00040A0000040A0
+          200040A0400040A0600040A0800040A0A00040A0C00040A0E00040C0000040C0
+          200040C0400040C0600040C0800040C0A00040C0C00040C0E00040E0000040E0
+          200040E0400040E0600040E0800040E0A00040E0C00040E0E000800000008000
+          20008000400080006000800080008000A0008000C0008000E000802000008020
+          20008020400080206000802080008020A0008020C0008020E000804000008040
+          20008040400080406000804080008040A0008040C0008040E000806000008060
+          20008060400080606000806080008060A0008060C0008060E000808000008080
+          20008080400080806000808080008080A0008080C0008080E00080A0000080A0
+          200080A0400080A0600080A0800080A0A00080A0C00080A0E00080C0000080C0
+          200080C0400080C0600080C0800080C0A00080C0C00080C0E00080E0000080E0
+          200080E0400080E0600080E0800080E0A00080E0C00080E0E000C0000000C000
+          2000C0004000C0006000C0008000C000A000C000C000C000E000C0200000C020
+          2000C0204000C0206000C0208000C020A000C020C000C020E000C0400000C040
+          2000C0404000C0406000C0408000C040A000C040C000C040E000C0600000C060
+          2000C0604000C0606000C0608000C060A000C060C000C060E000C0800000C080
+          2000C0804000C0806000C0808000C080A000C080C000C080E000C0A00000C0A0
+          2000C0A04000C0A06000C0A08000C0A0A000C0A0C000C0A0E000C0C00000C0C0
+          2000C0C04000C0C06000C0C08000C0C0A000F0FBFF00A4A0A000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FF0749000000
+          000000000000004907FF07005BAD009BA4ADADF7F700AD5B0007495BFFFF4907
+          F7F6FFFFF600F6FF5B4900F7FFF65249495252525249F6FFF70000ADFFFF089B
+          5B5B5B5B5B07FFFFAD0000ADFFFFFFFFFFFFFFFFFFFFFFFFAD0000ADFFFF07F7
+          F7F7F7F7F707FFFFAD0000ADFFA44949494949494949A4FFAD0000ADF649A307
+          EE0707EE07A349F6AD0000AD084908FFFFFFFFFFFF084908AD0000AD084908FF
+          FFFFFFFFFF084908AD0000AD084908FFFFFFFFFFFF084908AD0000ED084908FF
+          FFFFFFFFFF084908ED0049A4F64908FFFFFFFFFFFF0849F6A44907005B0A9BED
+          ADADADADED9B0A5B0007FF0749000000000000000000004907FF}
+        Caption = 'Cadastrar'
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 23
+        OnClick = btnCadastrarClick
+      end
+      object btnEditar: TUniBitBtn
+        Left = 121
+        Top = 185
+        Width = 76
+        Height = 25
+        Hint = ''
+        Glyph.Data = {
+          C6050000424DC605000000000000360400002800000014000000140000000100
+          08000000000090010000C40E0000C40E00000001000000000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000C0DCC000F0CA
+          A6000020400000206000002080000020A0000020C0000020E000004000000040
+          20000040400000406000004080000040A0000040C0000040E000006000000060
+          20000060400000606000006080000060A0000060C0000060E000008000000080
+          20000080400000806000008080000080A0000080C0000080E00000A0000000A0
+          200000A0400000A0600000A0800000A0A00000A0C00000A0E00000C0000000C0
+          200000C0400000C0600000C0800000C0A00000C0C00000C0E00000E0000000E0
+          200000E0400000E0600000E0800000E0A00000E0C00000E0E000400000004000
+          20004000400040006000400080004000A0004000C0004000E000402000004020
+          20004020400040206000402080004020A0004020C0004020E000404000004040
+          20004040400040406000404080004040A0004040C0004040E000406000004060
+          20004060400040606000406080004060A0004060C0004060E000408000004080
+          20004080400040806000408080004080A0004080C0004080E00040A0000040A0
+          200040A0400040A0600040A0800040A0A00040A0C00040A0E00040C0000040C0
+          200040C0400040C0600040C0800040C0A00040C0C00040C0E00040E0000040E0
+          200040E0400040E0600040E0800040E0A00040E0C00040E0E000800000008000
+          20008000400080006000800080008000A0008000C0008000E000802000008020
+          20008020400080206000802080008020A0008020C0008020E000804000008040
+          20008040400080406000804080008040A0008040C0008040E000806000008060
+          20008060400080606000806080008060A0008060C0008060E000808000008080
+          20008080400080806000808080008080A0008080C0008080E00080A0000080A0
+          200080A0400080A0600080A0800080A0A00080A0C00080A0E00080C0000080C0
+          200080C0400080C0600080C0800080C0A00080C0C00080C0E00080E0000080E0
+          200080E0400080E0600080E0800080E0A00080E0C00080E0E000C0000000C000
+          2000C0004000C0006000C0008000C000A000C000C000C000E000C0200000C020
+          2000C0204000C0206000C0208000C020A000C020C000C020E000C0400000C040
+          2000C0404000C0406000C0408000C040A000C040C000C040E000C0600000C060
+          2000C0604000C0606000C0608000C060A000C060C000C060E000C0800000C080
+          2000C0804000C0806000C0808000C080A000C080C000C080E000C0A00000C0A0
+          2000C0A04000C0A06000C0A08000C0A0A000C0A0C000C0A0E000C0C00000C0C0
+          2000C0C04000C0C06000C0C08000C0C0A000F0FBFF00A4A0A000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5249A4F6FFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFF4952520000F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFA4525BF607009BFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFF00F6FFF69B009BFFFFFFFFFFFFFFFFFFFFFFFFFF
+          00F7F65252FF009BFFFFFFFFFFFFFFFFFFFFFFFF07005B52F649FF009BFFFFFF
+          FFFFFFFFFFFFFFFFFFF700FF52F649FF009BFFFFFFFFFFFFFFFFFFFFFFFFF700
+          FF52F649FF009BFFFFFFFFFFFFFFFFFFFFFFFFA400FF52F649FF009BFFFFFFFF
+          FFFFFFFFFFFFFFFFA400FF52F649FF009BFFFFFFFFFFFFFFFFFFFFFFFFF700FF
+          52F649FF009BFFFFFFFFFFFFFFFFFFFFFFFFF700FF52F649FF009BFFFFFFFFFF
+          FFFFFFFFFFFFFFA400FF52F649FF009BFFFFFFFFFFFFFFFFFFFFFFFFA400FF07
+          F6525B00A4FFFFFFFFFFFFFFFFFFFFFFFFA400FF5252FF0800FFFFFFFFFFFFFF
+          FFFFFFFFFFFFF7005BFFFF0700FFFFFFFFFFFFFFFFFFFFFFFFFFFFA400070700
+          F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF70000F7FFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFF}
+        Caption = 'Editar'
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 24
+        OnClick = btnEditarClick
+      end
+      object btnExcluir: TUniBitBtn
+        Left = 201
+        Top = 185
+        Width = 87
+        Height = 25
+        Hint = ''
+        Glyph.Data = {
+          36050000424D3605000000000000360400002800000010000000100000000100
+          08000000000000010000C40E0000C40E00000001000000000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000C0DCC000F0CA
+          A6000020400000206000002080000020A0000020C0000020E000004000000040
+          20000040400000406000004080000040A0000040C0000040E000006000000060
+          20000060400000606000006080000060A0000060C0000060E000008000000080
+          20000080400000806000008080000080A0000080C0000080E00000A0000000A0
+          200000A0400000A0600000A0800000A0A00000A0C00000A0E00000C0000000C0
+          200000C0400000C0600000C0800000C0A00000C0C00000C0E00000E0000000E0
+          200000E0400000E0600000E0800000E0A00000E0C00000E0E000400000004000
+          20004000400040006000400080004000A0004000C0004000E000402000004020
+          20004020400040206000402080004020A0004020C0004020E000404000004040
+          20004040400040406000404080004040A0004040C0004040E000406000004060
+          20004060400040606000406080004060A0004060C0004060E000408000004080
+          20004080400040806000408080004080A0004080C0004080E00040A0000040A0
+          200040A0400040A0600040A0800040A0A00040A0C00040A0E00040C0000040C0
+          200040C0400040C0600040C0800040C0A00040C0C00040C0E00040E0000040E0
+          200040E0400040E0600040E0800040E0A00040E0C00040E0E000800000008000
+          20008000400080006000800080008000A0008000C0008000E000802000008020
+          20008020400080206000802080008020A0008020C0008020E000804000008040
+          20008040400080406000804080008040A0008040C0008040E000806000008060
+          20008060400080606000806080008060A0008060C0008060E000808000008080
+          20008080400080806000808080008080A0008080C0008080E00080A0000080A0
+          200080A0400080A0600080A0800080A0A00080A0C00080A0E00080C0000080C0
+          200080C0400080C0600080C0800080C0A00080C0C00080C0E00080E0000080E0
+          200080E0400080E0600080E0800080E0A00080E0C00080E0E000C0000000C000
+          2000C0004000C0006000C0008000C000A000C000C000C000E000C0200000C020
+          2000C0204000C0206000C0208000C020A000C020C000C020E000C0400000C040
+          2000C0404000C0406000C0408000C040A000C040C000C040E000C0600000C060
+          2000C0604000C0606000C0608000C060A000C060C000C060E000C0800000C080
+          2000C0804000C0806000C0808000C080A000C080C000C080E000C0A00000C0A0
+          2000C0A04000C0A06000C0A08000C0A0A000C0A0C000C0A0E000C0C00000C0C0
+          2000C0C04000C0C06000C0C08000C0C0A000F0FBFF00A4A0A000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFF08A4
+          52000052A408FFFFFFFFFFFFF652929B07F6F6079B9252F6FFFFFFF6529CFFFF
+          FFFFFFFFFFFF9C52F6FFFF529CFFF6524949494952F6FF9C52FF0852FFFFF60A
+          000000000AF6FFFF5208A49BFFFFF60A5B52525B0AF6FFFF9BA45207FFFFF60A
+          5B49495B0AF6FFFF075200F6FFFFF60A5B49495B0AF6FFFFF60000F6FFFFF60A
+          5B5B5B5B0AF6FFFFF6005207FFFFF60A494949490AF6FFFF0752A49BFFFF089B
+          525B5B529B08FFFF9BA40852FFFFF7495200005249F7FFFF5208FF529CFFFFFF
+          FF5252FFFFFFFF9C52FFFFF6529CFFFFFFFFFFFFFFFF9C52F6FFFFFFF652929B
+          07F6F6079B9252F6FFFFFFFFFFFF08A452000052A408FFFFFFFF}
+        Caption = 'Excluir'
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 25
+        OnClick = btnExcluirClick
+      end
+      object btnPesquisar: TUniBitBtn
+        Left = 293
+        Top = 185
+        Width = 87
+        Height = 25
+        Hint = ''
+        Glyph.Data = {
+          26050000424D260500000000000036040000280000000F0000000F0000000100
+          080000000000F0000000C40E0000C40E00000001000000000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000C0DCC000F0CA
+          A6000020400000206000002080000020A0000020C0000020E000004000000040
+          20000040400000406000004080000040A0000040C0000040E000006000000060
+          20000060400000606000006080000060A0000060C0000060E000008000000080
+          20000080400000806000008080000080A0000080C0000080E00000A0000000A0
+          200000A0400000A0600000A0800000A0A00000A0C00000A0E00000C0000000C0
+          200000C0400000C0600000C0800000C0A00000C0C00000C0E00000E0000000E0
+          200000E0400000E0600000E0800000E0A00000E0C00000E0E000400000004000
+          20004000400040006000400080004000A0004000C0004000E000402000004020
+          20004020400040206000402080004020A0004020C0004020E000404000004040
+          20004040400040406000404080004040A0004040C0004040E000406000004060
+          20004060400040606000406080004060A0004060C0004060E000408000004080
+          20004080400040806000408080004080A0004080C0004080E00040A0000040A0
+          200040A0400040A0600040A0800040A0A00040A0C00040A0E00040C0000040C0
+          200040C0400040C0600040C0800040C0A00040C0C00040C0E00040E0000040E0
+          200040E0400040E0600040E0800040E0A00040E0C00040E0E000800000008000
+          20008000400080006000800080008000A0008000C0008000E000802000008020
+          20008020400080206000802080008020A0008020C0008020E000804000008040
+          20008040400080406000804080008040A0008040C0008040E000806000008060
+          20008060400080606000806080008060A0008060C0008060E000808000008080
+          20008080400080806000808080008080A0008080C0008080E00080A0000080A0
+          200080A0400080A0600080A0800080A0A00080A0C00080A0E00080C0000080C0
+          200080C0400080C0600080C0800080C0A00080C0C00080C0E00080E0000080E0
+          200080E0400080E0600080E0800080E0A00080E0C00080E0E000C0000000C000
+          2000C0004000C0006000C0008000C000A000C000C000C000E000C0200000C020
+          2000C0204000C0206000C0208000C020A000C020C000C020E000C0400000C040
+          2000C0404000C0406000C0408000C040A000C040C000C040E000C0600000C060
+          2000C0604000C0606000C0608000C060A000C060C000C060E000C0800000C080
+          2000C0804000C0806000C0808000C080A000C080C000C080E000C0A00000C0A0
+          2000C0A04000C0A06000C0A08000C0A0A000C0A0C000C0A0E000C0C00000C0C0
+          2000C0C04000C0C06000C0C08000C0C0A000F0FBFF00A4A0A000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFF
+          FFFFFFFFFFFFF700FF00FFFFFFFFFFFFFFFFFFFFFFA400000000FFFFFFFFFFFF
+          FFFFFFFFA4000000A400FFFFFFFFFFFFFFFFFF07000000A4FF00FFFFFFA44900
+          52F7FFF70000A4FFFF00FFF60000A4F79B000000F707FFFFFF00FF009BFFFFFF
+          FFFF4900FFFFFFFFFF00A449FFFFFFFFFFFFFF00F7FFFFFFFF000007FFFFFFFF
+          FFFFFF9B52FFFFFFFF0000F6FFFFFFFFFFFFFFF700FFFFFFFF000007FFFFFFFF
+          FFFFFFA449FFFFFFFF005B52FFFFFFFFFFFFFF00A4FFFFFFFF00F60007FFFFFF
+          FFFF9B00FFFFFFFFFF00FF07005207F6074900F6FFFFFFFFFF00FFFFF65B0000
+          00A4FFFFFFFFFFFFFF00}
+        Caption = 'Pesquisar'
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 26
+      end
+      object btnVoltar: TUniBitBtn
+        Left = 649
+        Top = 185
+        Width = 76
+        Height = 25
+        Hint = ''
+        Glyph.Data = {
+          8A050000424D8A05000000000000360400002800000011000000110000000100
+          08000000000054010000C40E0000C40E00000001000000000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000C0DCC000F0CA
+          A6000020400000206000002080000020A0000020C0000020E000004000000040
+          20000040400000406000004080000040A0000040C0000040E000006000000060
+          20000060400000606000006080000060A0000060C0000060E000008000000080
+          20000080400000806000008080000080A0000080C0000080E00000A0000000A0
+          200000A0400000A0600000A0800000A0A00000A0C00000A0E00000C0000000C0
+          200000C0400000C0600000C0800000C0A00000C0C00000C0E00000E0000000E0
+          200000E0400000E0600000E0800000E0A00000E0C00000E0E000400000004000
+          20004000400040006000400080004000A0004000C0004000E000402000004020
+          20004020400040206000402080004020A0004020C0004020E000404000004040
+          20004040400040406000404080004040A0004040C0004040E000406000004060
+          20004060400040606000406080004060A0004060C0004060E000408000004080
+          20004080400040806000408080004080A0004080C0004080E00040A0000040A0
+          200040A0400040A0600040A0800040A0A00040A0C00040A0E00040C0000040C0
+          200040C0400040C0600040C0800040C0A00040C0C00040C0E00040E0000040E0
+          200040E0400040E0600040E0800040E0A00040E0C00040E0E000800000008000
+          20008000400080006000800080008000A0008000C0008000E000802000008020
+          20008020400080206000802080008020A0008020C0008020E000804000008040
+          20008040400080406000804080008040A0008040C0008040E000806000008060
+          20008060400080606000806080008060A0008060C0008060E000808000008080
+          20008080400080806000808080008080A0008080C0008080E00080A0000080A0
+          200080A0400080A0600080A0800080A0A00080A0C00080A0E00080C0000080C0
+          200080C0400080C0600080C0800080C0A00080C0C00080C0E00080E0000080E0
+          200080E0400080E0600080E0800080E0A00080E0C00080E0E000C0000000C000
+          2000C0004000C0006000C0008000C000A000C000C000C000E000C0200000C020
+          2000C0204000C0206000C0208000C020A000C020C000C020E000C0400000C040
+          2000C0404000C0406000C0408000C040A000C040C000C040E000C0600000C060
+          2000C0604000C0606000C0608000C060A000C060C000C060E000C0800000C080
+          2000C0804000C0806000C0808000C080A000C080C000C080E000C0A00000C0A0
+          2000C0A04000C0A06000C0A08000C0A0A000C0A0C000C0A0E000C0C00000C0C0
+          2000C0C04000C0C06000C0C08000C0C0A000F0FBFF00A4A0A000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFF7
+          5200000052F7FFFFFFFFFF000000FFFFFFF700499B0708079B4900F7FFFFFF00
+          0000FFFF9B49A4FFFFFFFFFFFFFFA4499BFFFF000000FFF74907FFFFFFFFFFFF
+          FFFFFF0749F7FF000000FF00A4FFFFFFFFF608FFFFFFFFFFA400FF000000F749
+          FFFFFFFF0800A4FFFFFFFFFFFF49F7000000529BFFFFFF0800A4FFFFFFFFFFFF
+          FF9B520000000007FFFF07005B080707070707FFFF07000000000008FFFF0000
+          5B494949490052FFFF08000000000007FFFF07005B080707070707FFFF070000
+          0000529BFFFFFF0800A4FFFFFFFFFFFFFF9B52000000F749FFFFFFFF0800A4FF
+          FFFFFFFFFF49F7000000FF00A4FFFFFFFFF608FFFFFFFFFFA400FF000000FFF7
+          4907FFFFFFFFFFFFFFFFFF0749F7FF000000FFFF9B49A4FFFFFFFFFFFFFFA449
+          9BFFFF000000FFFFFFF700499B0708079B4900F7FFFFFF000000FFFFFFFFFFF7
+          5200000052F7FFFFFFFFFF000000}
+        Caption = 'Voltar'
+        ParentFont = False
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 27
+        OnClick = btnVoltarClick
+      end
+      object btnSair: TUniBitBtn
+        Left = 731
+        Top = 185
+        Width = 69
+        Height = 25
+        Hint = ''
+        Glyph.Data = {
+          F6040000424DF60400000000000036040000280000000C000000100000000100
+          080000000000C0000000C40E0000C40E00000001000000000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000C0DCC000F0CA
+          A6000020400000206000002080000020A0000020C0000020E000004000000040
+          20000040400000406000004080000040A0000040C0000040E000006000000060
+          20000060400000606000006080000060A0000060C0000060E000008000000080
+          20000080400000806000008080000080A0000080C0000080E00000A0000000A0
+          200000A0400000A0600000A0800000A0A00000A0C00000A0E00000C0000000C0
+          200000C0400000C0600000C0800000C0A00000C0C00000C0E00000E0000000E0
+          200000E0400000E0600000E0800000E0A00000E0C00000E0E000400000004000
+          20004000400040006000400080004000A0004000C0004000E000402000004020
+          20004020400040206000402080004020A0004020C0004020E000404000004040
+          20004040400040406000404080004040A0004040C0004040E000406000004060
+          20004060400040606000406080004060A0004060C0004060E000408000004080
+          20004080400040806000408080004080A0004080C0004080E00040A0000040A0
+          200040A0400040A0600040A0800040A0A00040A0C00040A0E00040C0000040C0
+          200040C0400040C0600040C0800040C0A00040C0C00040C0E00040E0000040E0
+          200040E0400040E0600040E0800040E0A00040E0C00040E0E000800000008000
+          20008000400080006000800080008000A0008000C0008000E000802000008020
+          20008020400080206000802080008020A0008020C0008020E000804000008040
+          20008040400080406000804080008040A0008040C0008040E000806000008060
+          20008060400080606000806080008060A0008060C0008060E000808000008080
+          20008080400080806000808080008080A0008080C0008080E00080A0000080A0
+          200080A0400080A0600080A0800080A0A00080A0C00080A0E00080C0000080C0
+          200080C0400080C0600080C0800080C0A00080C0C00080C0E00080E0000080E0
+          200080E0400080E0600080E0800080E0A00080E0C00080E0E000C0000000C000
+          2000C0004000C0006000C0008000C000A000C000C000C000E000C0200000C020
+          2000C0204000C0206000C0208000C020A000C020C000C020E000C0400000C040
+          2000C0404000C0406000C0408000C040A000C040C000C040E000C0600000C060
+          2000C0604000C0606000C0608000C060A000C060C000C060E000C0800000C080
+          2000C0804000C0806000C0808000C080A000C080C000C080E000C0A00000C0A0
+          2000C0A04000C0A06000C0A08000C0A0A000C0A0C000C0A0E000C0C00000C0C0
+          2000C0C04000C0C06000C0C08000C0C0A000F0FBFF00A4A0A000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00F6F55B0049A4
+          0008FFFFFFFF494AF7F6FFFF52525252A4FF0008FFFFFFF652A4F7F749F70008
+          FFFFFFF64908FFFFA49B0008FFFFFFF64908FFFFA49C0008FFFFFFF64908FFFF
+          A49B0008FFFFFFF64908FFFFA4AC0008FFFFFFF64908FFFFFFFF0008FFFFFFF6
+          4908FFF700400008FFFFFFF64908FFF607070008FFFFFFF64908FFFF07070008
+          FFFFFFF64908FFFFA49B0008FFFFFFFF4908FFFFA49B0008FFFFF6A40008FFFF
+          A49B00F7F79B52009C0808F652A4F700000000004900000052F6}
+        Caption = 'Sair'
+        ParentFont = False
+        Font.Height = -12
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        TabOrder = 28
+        OnClick = btnSairClick
+      end
+      object UniDBGrid1: TUniDBGrid
+        Left = 138
+        Top = 216
+        Width = 692
+        Height = 396
+        Hint = ''
+        HeaderTitle = 'Endere'#231'os das Unidades'
+        HeaderTitleAlign = taCenter
+        DataSource = UniMainModule.dtsCadastroPontoUnidade
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowSelect, dgConfirmDelete, dgAutoRefreshRow]
+        WebOptions.Paged = False
+        WebOptions.PageSize = 10000
+        LoadMask.Message = 'Loading data...'
+        TabOrder = 29
+        OnCellClick = UniDBGrid1CellClick
+        Columns = <
+          item
+            FieldName = 'COD_PONTO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Ponto'
+            Title.Font.Height = -13
+            Title.Font.Name = 'Times New Roman'
+            Title.Font.Style = [fsBold]
+            Width = 50
+            Visible = False
+            Alignment = taCenter
+          end
+          item
+            FieldName = 'COD_UNIDADE'
+            Title.Alignment = taCenter
+            Title.Caption = 'Unidade'
+            Title.Font.Height = -13
+            Title.Font.Name = 'Times New Roman'
+            Title.Font.Style = [fsBold]
+            Width = 60
+            Visible = False
+            Alignment = taCenter
+          end
+          item
+            FieldName = 'NUM_CEP'
+            Title.Alignment = taCenter
+            Title.Caption = 'CEP'
+            Title.Font.Name = 'Times New Roman'
+            Title.Font.Style = [fsBold]
+            Width = 70
+            Alignment = taCenter
+          end
+          item
+            FieldName = 'DES_BAIRRO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Bairro'
+            Title.Font.Height = -13
+            Title.Font.Name = 'Times New Roman'
+            Title.Font.Style = [fsBold]
+            Width = 100
+            Alignment = taCenter
+          end
+          item
+            FieldName = 'DES_RUA'
+            Title.Caption = 'Rua'
+            Title.Font.Height = -13
+            Title.Font.Name = 'Times New Roman'
+            Title.Font.Style = [fsBold]
+            Width = 150
+          end
+          item
+            FieldName = 'DES_NUMERO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Numero'
+            Title.Font.Height = -13
+            Title.Font.Name = 'Times New Roman'
+            Title.Font.Style = [fsBold]
+            Width = 70
+            Alignment = taCenter
+          end
+          item
+            FieldName = 'DES_CIDADE'
+            Title.Alignment = taCenter
+            Title.Caption = 'Cidade'
+            Title.Font.Height = -13
+            Title.Font.Name = 'Times New Roman'
+            Title.Font.Style = [fsBold]
+            Width = 120
+            Alignment = taCenter
+          end
+          item
+            FieldName = 'DES_UF'
+            Title.Alignment = taCenter
+            Title.Caption = 'UF'
+            Title.Font.Height = -13
+            Title.Font.Name = 'Times New Roman'
+            Title.Font.Style = [fsBold]
+            Width = 40
+            Alignment = taCenter
+          end
+          item
+            FieldName = 'DES_PONTO_REF'
+            Title.Caption = 'Ponto de Refer'#234'ncia'
+            Title.Font.Height = -13
+            Title.Font.Name = 'Times New Roman'
+            Title.Font.Style = [fsBold]
+            Width = 150
+          end
+          item
+            FieldName = 'NUM_CNPJ'
+            Title.Alignment = taCenter
+            Title.Caption = 'CNPJ'
+            Title.Font.Height = -13
+            Title.Font.Name = 'Times New Roman'
+            Title.Font.Style = [fsBold]
+            Width = 120
+            Alignment = taCenter
+          end>
+      end
+      object UniPanel5: TUniPanel
+        Left = 330
+        Top = 88
+        Width = 50
+        Height = 1
+        Hint = ''
+        TabOrder = 30
+        BorderStyle = ubsSolid
+        Caption = ''
+        Color = clBackground
+      end
+      object UniPanel6: TUniPanel
+        Left = 478
+        Top = 88
+        Width = 80
+        Height = 1
+        Hint = ''
+        TabOrder = 31
+        BorderStyle = ubsSolid
+        Caption = ''
+        Color = clBackground
+      end
+      object UniPanel7: TUniPanel
+        Left = 670
+        Top = 88
+        Width = 130
+        Height = 1
+        Hint = ''
+        TabOrder = 32
+        BorderStyle = ubsSolid
+        Caption = ''
+        Color = clBackground
+      end
+      object UniPanel8: TUniPanel
+        Left = 66
+        Top = 124
+        Width = 314
+        Height = 1
+        Hint = ''
+        TabOrder = 33
+        BorderStyle = ubsSolid
+        Caption = ''
+        Color = clBackground
+      end
+      object UniPanel9: TUniPanel
+        Left = 478
+        Top = 124
+        Width = 170
+        Height = 1
+        Hint = ''
+        TabOrder = 34
+        BorderStyle = ubsSolid
+        Caption = ''
+        Color = clBackground
+      end
+      object UniPanel10: TUniPanel
+        Left = 750
+        Top = 124
+        Width = 50
+        Height = 1
+        Hint = ''
+        TabOrder = 35
+        BorderStyle = ubsSolid
+        Caption = ''
+        Color = clBackground
+      end
+      object UniPanel11: TUniPanel
+        Left = 78
+        Top = 161
+        Width = 170
+        Height = 1
+        Hint = ''
+        TabOrder = 36
+        BorderStyle = ubsSolid
+        Caption = ''
+        Color = clBackground
+      end
+      object UniPanel12: TUniPanel
+        Left = 560
+        Top = 161
+        Width = 240
+        Height = 1
+        Hint = ''
+        TabOrder = 37
+        BorderStyle = ubsSolid
+        Caption = ''
+        Color = clBackground
+      end
+      object UniPanel4: TUniPanel
+        Left = 144
+        Top = 88
+        Width = 50
+        Height = 1
+        Hint = ''
+        TabOrder = 38
+        BorderStyle = ubsSolid
+        Caption = ''
+        Color = clBackground
+      end
+      object UniLabel12: TUniLabel
+        Left = 330
+        Top = 400
+        Width = 137
+        Height = 13
+        Hint = ''
+        Caption = 'Nenhum registro encontrado'
+        TabOrder = 39
+      end
+      object UniDBGrid2: TUniDBGrid
+        Left = 0
+        Top = 216
+        Width = 132
+        Height = 396
+        Hint = ''
+        HeaderTitle = 'Pontos das Unidades'
+        HeaderTitleAlign = taCenter
+        DataSource = UniMainModule.dtsPontoUnidade
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowSelect, dgConfirmDelete, dgAutoRefreshRow]
+        WebOptions.Paged = False
+        WebOptions.PageSize = 1000
+        LoadMask.Message = 'Loading data...'
+        TabOrder = 40
+        Columns = <
+          item
+            FieldName = 'COD_PONTO'
+            Title.Alignment = taCenter
+            Title.Caption = 'Ponto'
+            Title.Font.Height = -13
+            Title.Font.Name = 'Times New Roman'
+            Title.Font.Style = [fsBold]
+            Width = 64
+            Alignment = taCenter
+          end
+          item
+            FieldName = 'COD_UNIDADE'
+            Title.Alignment = taCenter
+            Title.Caption = 'Unidade'
+            Title.Font.Height = -13
+            Title.Font.Name = 'Times New Roman'
+            Title.Font.Style = [fsBold]
+            Width = 64
+            Alignment = taCenter
+          end>
+      end
+    end
+  end
+end
